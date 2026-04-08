@@ -1,0 +1,2502 @@
+
+******************************************************** Introduction to Java ***********************************************************
+*What is Java:
+ -A high-level,object-oriented programming language.
+ -Used for web applications,mobile apps(Andriod) enterprise solutions etc.
+*********************************************************************************************************************************
+
+*History of Java:
+ -A java created by James Gosling in 1991.
+ -Developed by sun microsystems in 1995.
+ -Now owned by oracle in 2009.
+ -Wtite once,Run Anywhere(Wora) philosophy (Platform Independece).
+*********************************************************************************************************************************
+
+*Features of Java:
+ 1.Object Oriented
+ 2.Simple
+ 3.Robust 
+ 4.Distributed
+ 5.Secure
+ 6.Architecture Neutral
+ 7.Portable
+ 8.Interpreted
+ 9.Multithreaded
+ 10.Open Source
+**********************************************************************************************************************************
+
+*Platoform Independence :
+ Source Code => Compile => Byte Code => Native Code (Windows,Linux,MAC)
+**********************************************************************************************************************************
+
+*Execution of Java Application:
+1.Source Code(.Java):
+ User Written java program.
+2.Compiler(javac):
+ Converts .java => .class(bytecode).
+3.Bytecode (.class):
+ Platfrom independent code sent to jvm.
+4.ClassLoader:
+ Loads required class into jvm memory(inbuild java classes)
+5.Bytecode Verifier:
+ Checks bytecode =>safe and valid.
+6.JVM Execution :
+Interpreter + JIT run bytecode on machine.
+7.Native OS:
+Final machine instructions executed by OS.
+***********************************************************************************************************************************
+
+*IDE :(Intergrated Development Environment)
+
+*JDK:(Java Development Kit)
+     Provides various libraries
+*JDK contains JRE (Java Runtime Environment)
+
+*JRE:Provides the runtime environment
+*JRE contains JVM (Java Virtual Machine)
+
+*JVM:Execution engine
+     Converts byte code into machine code
+
+*JIT(Just In Time):It is part of JVM 
+                   Converts bytecode  => machine code at runtime for better perfoemance
+                   To work fast.
+
+* JDK => JRE => JVM => JIT Compiler
+*************************************************************************************************************************************
+
+*Identifier :
+A name given to classes,methods,variables,packages,arrays,enums,interfaces etc.
+*************************************************************************************************************************************
+
+*Naming Convention in Java:
+1.Class Names:
+ Ex.Student,EmployeeDeatils
+2.Inetrface Names:
+ Ex.Ruunable,Readable
+3.Method names:
+ Ex.getData(); calculateTotal();
+4.Variables Names:
+ Ex.age ,studentName
+5.Constant Names
+ Ex.MAX_SIZE,PI
+6.Package Name:
+ Ex.com.school.name
+
+*Code:
+package org.mck.demo1;
+public class A{
+ public static void main(String args[]){
+   int y=44;
+   System.out.println(y);
+ }
+}
+
+Identifiers :
+or.mck.demo1
+main
+A
+y
+args
+out
+system
+println
+
+*****************************************************************************************************************************
+*public static void main(String args[])
+1.public:
+The JVM must be able to access the main method outside the class.
+If it is not public,the program can not start.
+
+2.static:
+The JVM can call main method without creating an object of the class.
+If static removed,JVM would not know how to call it.
+
+3.void:
+The main method does not return any value to the JVM.
+
+4.main:
+This is the fixed entry point name for every java program.
+If the name is changed,the program will not run.
+
+5.String args[]:
+Used to receive command line comments when running the program.
+****************************************************************************************************************************
+
+*Class: 
+-It is a blueprint
+-Class do not required memory
+-class name is identifier
+-class name is reference data type
+-class will tell the status and behaviour of object
+-it is a real world entity
+-class contains 7 elements:
+ 1.Variables
+ 2.Method
+ 3.Constructor
+ 4.Object
+ 5.Static block
+ 6.Instance block
+ 7.enum
+-all access modifier are aplicable to class 
+-you can declare class as final
+-you can declare class as abstract
+-you can declare class inside class its called nested or inner class
+***************************************************************************************************************************
+
+*Data Type:
+-Which type of data you stored in memory is called data type.
+
+*Primitive Data Type(8):
+1.byte(1 byte):
+Range=-128 to 127
+Default value:0
+Ex.byte age=20;
+
+2.short(2 byte):
+Range=-32768 to 32768
+Default value:0
+Ex.short population=500;
+
+3.int(4 byte):
+Default value:0
+Ex.int salary=50000;
+ 
+4.long(8 bytes):
+Default value:0L
+Ex.long views=12345678;
+
+5.float(4 bytes):
+Default value=0.0f
+Ex.float price 99.99f;
+
+6.double(8 bytes):
+Default value:0.0d
+Ex.double marks=90.80;
+
+7.char(2 bytes):
+Default value:\u0000(null character)
+Ex.char grade='A'; 
+
+8.boolean(1 bit):
+Default value:false
+Ex.boolean isPassed=true;
+***************************************************************************************************************************
+
+*Object:
+-It is physical entity.
+-Object required memory.
+-Syntax:Class name Object name=new Class name
+-It is instance of class.
+-Object will implement status and behavior of class.
+-Object is reference variable.
+-Yoy can create many object of one class.
+-You can not create object without class.
+-You can create class without object.
+-Each object have diff memory location.
+****************************************************************************************************************************
+
+*Variable:
+-Name given to the memory location is called variable.
+*Types:
+1.Static Variable:(Class Variable):
+-It is class level variable.
+-It will declare inside the class and outside the method.
+-It will create single variable and that copy will share to all resources of class.
+-Resources :Object,Methods,Constructor,block
+-The memory allocation done when the class runs into memory.
+-If you dont assign value the it give default value.
+-All access modifier are applicable to static variable.
+-Final modifier also applicable.
+-It will store in heap memory.
+***************************************
+2.Instance Variable:
+-It is object level variable.
+-It will declare inside the class and outside the main method.
+-It will create seperate copy of each object.
+-If you not assign value to variable the compiler give default value.
+-All access modifier are applicable.
+-Final modifier alo applicable.
+-It will store in heap memory.
+****************************************
+3.Local Variable:
+-It is block level variable(Method level).
+-It will declare inside the method.
+-It will used to store value temporary prepect.
+-If you not assign value then compiler will not assign value it give error.
+-It will must initialize value before use.
+-All access modifier are not applicable.
+-Only final modifier is applicable.
+-It will store in stack memory.
+************************************************************************************************************************
+
+*Method:
+-(Parameter Method,Non-Parameter,Void,Return).
+-A method is block of code that performs a specific task.
+-We use method to reuse code.
+-It used to large program into small.
+-It is called sub programs. 
+-Syntax:
+        access specifier return type method name() {}
+-You can call method many times.
+-Method name is identifier.
+******************************************
+*Types Of Method:
+1.Instance Method:
+-It is object level method.
+
+2.Static Method:
+-It is class level Method.
+*****************************************
+1.Based on Return Type:
+a.Void Method: Does not return a value.
+b.Return Method: Return value.
+
+2.Based on Parameters:
+a.Non-Parameterised: Does not take value.
+b.Paratmeterised :Take value.
+************************************************************************************************************************
+
+** Constructor:
+-It is special method.
+-It is used to initilize the object and instance variable.
+-It has same name as class.
+-Constructor dont have any return type.
+-Constructor will execute immediately when object is created.
+-Syntax:
+        access modifier Constructor name() {}
+-You can define many constructor in one class.
+-All access modifier are applicable.
+-You can create many object in one class.
+-But one object can call only one constructor.
+-You can overload the constructor.
+-You can not override the constructor.
+-You can not declare constructor as static,abstarct,final.
+-If you define return type to the constructor then it will treat as normal method.
+********************************************
+*Type od Constructor:
+1.Default Constructor:
+-Without constructor you can not execute the program.
+-If programmer not define and type of constructor then compiler give default constructor and execute program.
+-It generate by compiler into byte code.
+-All access modifier are applicable.
+*******************************************
+2.Non-Parameterized Constructor:
+-It define by the programmer.
+-All access modifier are applicable.
+-All programmer can define custome code.
+*******************************************
+3.Parameterized Constructor:
+-It will define by programmer.
+-All access modifier will be applicable.
+-You can call method into constructor.
+-Private constructor used to create single tone class.
+-Single tone class means you can create only object of the class in same class only.
+*************************************************************************************************************************
+
+** Access Specifier :
+-It tell you the scope of the element.
+-It not tell you how to access the element.
+-All are applicable for constructor.
+-For instance and static(Method & variable) all are applicable.
+-For inner class all modifier are applicable.
+-For interface only public and default modifier are applicable.
+-For enum public and default are applicable.
+***************************************
+*Types:
+1.Public -(Public park:Every one can use):
+-Scope:Accessible everywhere.
+-(same class,same package,outside package,subclass).
+-Ex.public int age;
+***************************************
+2.Protected -(Give properties to children):
+-Scope:Accessible in same class,same package,subclass of other package.
+-Ex.protected int marks;
+***************************************
+3.Default -(No keyword) :
+-Scope:Accessible only in same class and same package.
+-Ex.int n1;
+***************************************
+4.Private -(your home):
+-Scope:Accessible only in same class.
+-Ex.private string pass;
+**************************************************************************************************************************
+
+** This Keyword:
+-It is a keyword.
+-It is used to refer current class object.
+-Usually it is used to make differnce between method(local variable)and current class.
+-Generally local variable and current class instance variable are same same.
+-This keyword is only used in instance area.
+-It is not used in static area.
+-1.Static Method:It can not used in main method.
+-2.Static block:It can access current class static properties.
+-this keyword do not required inheritance.
+****************************************************************************************************************************
+
+*This Constructor :
+-It is used to call current class object.
+-You can only use in constructor.
+-This keyword should be write first line of constructor.
+-You can access more than one this keyword in on constructor.
+****************************************************************************************************************************
+
+**Method Overloading:
+-Same class same name but different parameters.
+-Keep the number of arguments different.
+-Type of arguments should be different.
+-Order of arguments should be different.
+***************************************************************************************************************************** 
+*Static Variable:
+-Some characteristics and begavior belong to the class rather than specific instance.
+-interestrate,calculateinterestRate method for saving account class.
+-Count variable in employee to count the number of object.
+-Such data members are static for all instances.
+***********************************************
+*Static Variables in memory:
+-Shared by all objects :=Count => 1.Emp1
+                               => 2.Emp2
+                               => 3.Emp3
+-Only single copy exits.
+******************************************************************************************************************************
+*Static Method :
+-Static method can access static data members of a class only.
+-Static method invoked using class name.
+-Reference "this" is never passed to static method.
+-< class name >.< method_name >(). 
+*********************************************************************************************************************************
+** Static initilization block :
+-Arbitrary block of code.
+-Execute when class is loaded.
+-Used to initilize static variable.
+-A class can have more than one static block.
+-If more than one static block exits in program then called in the order they appear in source code.
+-static {
+ }
+**********************************************************************************************************************************
+
+**          Static                                             Non-Static  
+1.It is a class level variable.                  1.It is object level variable.
+2.It does not require to create to        2.It require to create object to 
+  object to execute program.                    execute program.
+3.Only static variable are declared     3.All variable are declared in this block.
+  in static block.
+4.It is shareble the values.                    4.It is not shareable values.
+***********************************************************************************************************************************
+
+** toString() Method :
+-toString() belong to the object of class,so every class inherits it.
+-Its job is to return a string representation of an object.
+-We override toString() to the print meningful object data.
+-When we print object,toString is automatically called.
+-Ex.@override
+    public String toString(){
+          return name + " " + id
+       }
+************************************************************************************************************************************
+
+**Parameters Passing Method :
+-In java parameters passed to method using "Pass by values" mechanism.
+-Passing Primitive data type => A copy of the variable is created on the stack.
+-Passing object as parameters => References are passed by the value (copy of the reference "not the object" is created on stack.
+**************************************************************************************************************************************
+
+** Control Statements :
+-Control statements decide which part of code should be execute based on condition.
+*Types:
+1.if Statement: Execute block if condition is true.
+2.if-else Statement: Executes one block if true,another block if false.
+3.if-else if ladder: Multiple conditions wants to execute.
+4.Switch Statement: Select one block among many based on value.
+**************************************************************************************************************************************
+
+** Looping Statements :
+-Loop are used to repeat a block of code multiple times.
+*Types:
+1.For loop: Repeat a block fixed number of items.
+2.While loop: Repeat while condition true.
+3.do-while: Repeat at least once,then check condition.
+**************************************************************************************************************************************
+
+** Array :
+-An array is collection of elements of the same data types stored in contiguous memory location.
+-It allows storing multiple values in single variable.
+-Elements are accessed using index.
+-Syntax:
+         arrayName=new DataType[size];
+-Array is called first object class because array object is also created without using new keyword.
+*****************************************
+*Types of array: 
+1.Single Dimensional Array(1D array) : One Row.
+-Ex.int[]marks={1,2,3,4,5};
+2.Multi Dimensional Array(2D aaray) : Matrix/Row & Column.
+Ex.int[][]   matrix={{1,2},{3,4}}
+***************************************************************************************************************************************
+
+*Enhanced For Loop :
+-For each is designed to cycle through collection of objects such as an array in strictly sequential manner from start to end.
+   int nums[]={1,2,3,4,5}
+
+       int sum=0;
+    for(int x:nums){
+        sum+=x;
+  }
+*Sysntax:
+           for(type var:collection)
+***************************************************************************************************************************************
+
+**VarArgs :
+-VarArgs means variable arguments.
+-Restricting number and type of of input parameters while declaring the method.
+-Solution : Make the signature dynamic.
+-To present variable argument use operator called as ellipses(...) 3 dot after data type.
+
+-Rules: 
+-Method that accept zero to many arguments is called as var=args method.
+-Used to reduce version of overloaded methods in the application.
+
+-public void test(int x,int...y) = Invalid more than one variable argument type.
+-public void test(int ...x,String name) = Invalid arguments must be last parameter.
+***************************************************************************************************************************************** 
+
+** Memeory De-allocation in java :
+-Destructors are for writing code that frees memory when an object is dead.
+-Java has build memory handling mechanism called as garbage collection.
+-Garbage collection has mechansim provided by java virtual machine(JVM) to reclaim heap spa from objects which are unreachable.
+*****************************************************************************************************************************************
+
+** System.gc() & finalize methods :
+-Garbage collected can be requested by calling system.gc() method or runtome getRuntime().gc method.
+-Before garbage collection object class finazlize(),helps to free non java resources occupied by an object to perform clean up.
+******************************************************************************************************************************************
+
+** Structured System Analysis & Design (SSAD) :
+- Clinet Requirement => Functional Requirement => Mapping of Data & Function => Data Dictionary => Execution of System Hirarchy =>
+ Entity Relationship => Coding => Testing => User Acceptence => Client Requirement 
+*************************************
+
+*Limitations of SSAD :
+-More focus on procedure more than data.
+-Translation of user requirement into system design is complex.
+-Not able to source code and since data is global.
+-Does not map with natural way of thinking.
+-Dificult to debug.
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+********************************************************** OOPs CONCEPT  *******************************************************************
+
+**Object-Oriented Approach :
+*The 4 Pillers of OOPs :
+1.Abstraction-
+2.Encapsulation-
+3.Inheritance-
+4.Polymorphism-
+*********************************************************************************************************************************************
+
+** What is Object  :
+-An object is entity which has well defined structure and behavior.
+-An object possesses certain chracteristics.
+-state
+-behavior
+-identity
+-responsibility
+****************************
+** State of an object :
+ -Employee Attributes :
+        empid
+        name           all are static
+        gender
+
+        
+        age
+        address
+        phone
+        basicsalary    all are dynamic
+        education
+        experience
+***********************************
+
+* Behavior of object :
+-It is how an object acts and reacts,in terms of the states changes and message passing.
+               Employee as an Object
+                        calculate
+                        printdetails
+**********************************
+
+* Identity of an object :
+-It is the property of an object which distingushes from all other objects.
+-A single or group of attributes can be idntity of an object.
+                     Employee
+                      empid
+                      name
+*************************************
+
+*Responsibility of an object :
+-Responsibility of an object is the role serves within the system.
+-An object cab be tangible or a conceptual entity.
+**********************************************************************************************************************************
+
+** Why java is not fully object oriented:
+-Java support primitive data types.
+-Java does not support operator overloading.
+-Java does not support multiple inheritance.
+*************************************************
+** Java Strongly Supports object oriented programming language :
+-int,boolean,double = Primitive data types.
+-overloading,constructors,operators,method.
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+*** Encapsulation :
+-It is concept of OOPs.
+-It is used to bind a data into single entity. Ex.class.
+-To achieve the encapsulation by declaring properties of class as private.
+-Properties means variables and methods.
+-To access that method we use public getter setter method.
+-It is compulsory to define getter and setter public.
+-You can define getter & setter as private protected & default.
+-You can define getter setter public,protected&default variables.
+-It is not compulsory that each private variables need getter & setter method but usually getter & setter used to private variables.
+****************************************
+*Advantages :
+-It is provide data security.
+-You can protect data by using encapsulation.
+-You can hide a data by using methods to access that data through some validation.
+****************************************
+*Disadvantage :
+-It may slow down the performance.
+****************************************
+
+-The classes which have all private variables & private getter & setter method is called tightly encapsulated class.
+
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+
+** POJO Class (Plain Old Java Object class) :
+-Which have getter setter method,to String ,method.
+
+*********************************************************************************************************************************************
+
+** Accessor & Mutator Method :
+-Accessor methods mearly access instance. Ex.get xxx() methods.
+-Mutator methods actually change content. Ex.set xxx() methods.
+
+**********************************************************************************************************************************************
+
+**Containment : (Has-A Relationship) :
+-Only object may contain another as part of its attributes.
+-Document contain sentences which contain words.
+-Computer system hs hard disk,processor,RAM,mouse,monitor etc.
+-The containment need not to be physical.
+-Ex.Computer System
+
+-Computer => Hard disk,RAM,Warranty,Processor.
+
+*****************************************************
+
+** Has-A Relationship :
+-It is an association between 2 classes.
+*Types :
+1.Composition
+2.Aggregation
+-Like is-A relationship,Has-A relationship do not have any keyword.
+-Create one class object into another class.
+-Ex.
+    class A{
+    }
+    class B{
+        A a1=new A();
+   }
+
+******************************************************
+
+1.Composition :
+Ex.class Hospital {
+         dept d=new dept();
+        }
+         class dept {
+        }
+-It is Has-A relationship.
+-Where container and containt have strong bond with each other  (Tightly Coupled).
+-Hospital -It is Container.
+-Dept -It is containt.
+**********************************************************
+2.Aggreegation :
+Ex.  class Hospital{
+     Doctor d=new Doctor();
+    }
+      class Doctor{
+ }
+-It is Has-A relationship.
+-Weak bonding between container and content. (Loosely Coupled ).
+-Hospital- It is Container.
+-Doctor -It is containt.
+
+*************************************************************************************************************************************
+************************************************************************************************************************************* 
+*************************************************************************************************************************************
+
+***  Inheritance : 
+-It is a OOPs concept.
+-One class can access the properties of other class.
+-Child class can access the properties of parent class.
+- Parent Class - Super Class - Base Class
+- Child Class - Sub Class - Derived Class
+-Ex
+-  Loan Class : It is parent class.
+-  Car Loan  : It is child class.
+-  Home Loan : It is child Class.
+-Car loan and home loan they are siblings.
+-Parent class can not access the properties of child class.
+-Parent class contains general properties.
+-Child class contain specific properties.
+-extends keyword used for inheritance.
+-Inheritance shows Is-a relationship.
+-Parent class constructor will not ingerited to child class.
+-private properties of parent class will not be inherited to the child class.
+
+** without inheritance :
+1. repeatation of code.
+2. maintainance of code become difficult.
+3. to do the changes in a code it is a time consuming process.
+4. to test the code it is also time consuming process.
+5. there is no reusability of code.
+
+** with inheritance :
+*advantages :
+1. no repeatation of code.
+2. maintainance of code become easy.
+3. to do the changes in a code it is less time consuming process 4. to test the code it is also less time consuming process.
+5. it will in ease the reusability of code.
+6. by using inheritance you can increase the features of a class.
+
+*Dis-advantage :
+1. if one class inherited another class so they are tightly coupled with each other.
+2. you can not stop to inherited properties of parent class to child class.
+
+-you can create a object of parent class.
+-but generally programmer will not create a object of parent class.
+-he will give preference of object creation of child class.
+-final and static properties also inherited to child class unless and until they are not prival.
+
+************************************************
+************************************************
+** Types of Inheritance in Java :
+*Allow in Java :
+1.Single Inheritance
+2.Multi-level Inheritance
+3.Hirarchical Inheritance
+
+* Not allow in Java :
+1.Multiple Inheritance :
+-It is not allowed in java because of ambiguity error.
+-If one child class have many parent classes and they hav same method the compiler get confused which method should call.
+-In java using interface we can achieve multiple inheritance.
+
+2.Cyclic Inheritance
+3.Hybrid Inheritance
+
+*************************************************************************************************************************************
+************************************************************************************************************************************* 
+*************************************************************************************************************************************
+
+** this Keyword : refer current class object.
+**Super keyword : refer parent class object.
+
+*************************************************************************************************************************************
+************************************************************************************************************************************* 
+*************************************************************************************************************************************
+** Super Keyword :
+-It is a keyword.
+-Super keyword is used to refer parent class object.
+-Usually super keyword is used to make difference between child class instance or static properties (variable, method) &parent class instance or static properties.
+-Genrally child class instance or  static properties and parent class instance or static properties have same same.
+-Super keyword is used only in instance area.
+ -instance method
+ -instance block
+ -constructor
+-Super keyword will not used in static area.
+ -static method
+ -static block
+
+**********************************************************
+
+* Super() Constructor :
+-Super() constructor is used to call parent class constructor.
+-Super() constructor you only used in constructor.
+-Super () should be first line of constructor.
+-You can not call more than one super() constructor in a constructor.
+-You can used super() and this() constructor simultaneously.
+
+**********************************************************************************************************************************************
+**********************************************************************************************************************************************
+
+**Difference between Containment and Inheritance :
+1.Containment used :
+ -When the features of existing class are needed to inside your class,but not its interface.
+ -Computer system has hard disk.
+ -Car has engine,wheel.
+
+2.Inheritance Used :
+ -When you want to force the new type to be the same type of base class.
+ -Computer system is an electronic device.
+ -Car is vehical.  
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+*** Polymorphism :
+-The ability different types of related objects to respond to the same message in their own way is called polymarphism.
+-Polymarphism helps :
+ -Design extensible software; as new object can be added to the design without rewritting existing procedures.
+
+                    move()
+  Remote      =>       Car
+  move()       =>       Helecopter
+*********************************************************
+* Types :
+1.Compile-time : Method overloading  - Early binding
+2.Runtime : Method overriding - Late binding
+********************************************
+-Method overriding only works when we create inheritance.
+
+**                        Overloading                                                  Overriding
+-Scope          1.Generally done in same class.        1.In the inherited class.
+-Purpose      2.Handy for program design as         2.Message same but its implementation
+                        different method name needed         needs to specific to the derived class.
+                       not be remebered.
+-Signature   3.Different for each method              3.Has to be same in derived class as in
+of method      overloaded.                                            base.
+-Return        4.Can be same or different as it         4.Return type also need to be same.
+type                 is not considered.
+
+*****************************************************************************
+**  Polymorphism :
+-greek term
+-poly many
+-morphism forms
+-polymorphism many forms
+
+-the object have an ability to change its behaviour according to the requirement.
+-polymorphism it is a concept of OOPs
+
+1.Method Overloading (Compile-Time polymorphism) :
+-same class, same method_name but having a different arguments
+-same class, same method_name but have different method signature
+-method signature
+-access modifier return_type method_name(parameter_list){
+}
+
+-in method overloading inheritance do not have any role
+-you can overload instance method
+-you can overload the static method you can overload main() method
+-you can overload final method
+- you can overload abstract method
+-you can overload constructor
+-access modifiers do not have any role in method overloading
+-you can overload private method
+-method return type do not have any role in method overloading
+-method overloading call as compiletime polymorphism
+-it is also called as static polymorphism or early binding
+-in method overloading the method calling is based on reference type
+- method call
+1. method name
+2. arguments
+
+*************************************************************************
+2. Method Overriding (runtime polymorphism) :
+-method overriding
+-method signature should be same but one method in parent class and another method in ch
+-method signature
+-access modifier return type method_name(parameter list){
+}
+-inheritance required for method overriding
+-you can not override private method
+-you can not override final method
+-you can not override static method
+-you can not override constructor
+-access modifier
+- either you can keep same access modifier or if you want to change it then increase t
+-access modifier
+-private< default < protected < public
+-dynamic dispatch
+e.g.
+public class A {
+public void m1() {
+System.out.println("Mango");
+}
+
+-private default < protected public
+-dynamic dispatch
+Ex. public class A (
+public void m1() (
+System.out.println("Mango");
+public void k1() (
+System.out.println("Cherry");
+public class B extends A
+public void m1() {
+System.out.println("Apple");
+public void di() (
+} System.out.println("Orange");
+
+Ex.1) A al-new А();
+-parent class reference and parent class object
+you can acces only parent class perties
+
+2) B bl-new B();
+child reference and child class object
+you can access both parent and child class properties
+you can not access parent class overridden method
+
+3) A a2-new B();
+parent class reference and child class object
+parent class reference can hold child class object it is called as dynamic dispatch
+you can access only those method from child class which is overrided by child class
+the method which is only belongs to child class you can not access
+from parent class you can access those method which are not guercided by child class
+-you can not access overridden method of parent class.
+Object ol-new Object(); (Obict class is the parent class of all the classes)
+String si-new String();
+Object 02-new String();
+String s2-new Object();//Error
+
+4) B 62-new A(); //error
+It class reference and parent class object
+******************************************************************************************************************************************
+******************************************************************************************************************************************
+
+** Dynamic Data type Governs method selection :
+ -Every reference variable has two types static and dynamic.
+     Employee ref=new Manager();
+-Here ref has static data type employee & ref has dynamic data type manager.
+
+* Dynanaic data type :- Method selection.
+-super class reference can defez to Sub class object
+-Dynamic data type of super class referen governs method invocation.
+
+-Static void displaysal (Employee emp)
+-emp.calsalazy();
+-emp.cal Ice();    //compile exz02
+
+********************************************************************************************************************************************
+** Solution type casting :-
+- Super class reference, must be type casted using subclass to invokeits special method.
+-It is caved as down casting.
+
+-Ex-
+static void displaysal (Empolgee emp)
+emp. Calsalc);
+((managez) emp).calsalk);    // no error
+Managez m(mangez) emp;
+m.carsal(ز)
+*********************************************************************************************************************************************
+** RTTI  :
+- why instance of operator,
+- identifying data type of an object To access object polymorphically.
+- Java Runtime keeps track of the class to which each object belongs
+- This information is used by java to Select the cozzect methods to execute at zen time.
+Ex.
+Employee e new manager();
+if ( e instanceof Manager) {
+
+}
+
+*******************************************************************************************************************************************
+** Covarient Return Types  :-
+-Subtclass has to follow the same method an method overriding Principle Singnature as that supez class
+-Java allows you to change return in the overriden method as long as new return type is subtype of declared type.
+
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+
+** Final Keyword:-
+-It is a keyword.
+-If you declare variable as final then you can not change it's value.
+- If you declare method as final then you can not override that method.
+-you can declare class as final.
+-Ex. string, Scanner & all wapper class if you declare class as final the you Can not inherit that class.
+-it is a modifiez.
+-it is applicable to method & variable.
+-it is applicable to local variable also.
+- it is only modifier which applicable to the local variable.
+-you can declare method argument as final
+-you can not declare constructor as final
+-you can not dedare abstract class as final
+-you can declare abstract method as final
+-by default on variables ininterface are final.
+-you can overload final method.
+
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+
+**Static method :-
+-you can not override Static method This look like overriding - but it is method hiding.
+-static method call by reference type.
+-you can not override manc) method
+*******************************************************************************************************************************************
+
+** Object class :
+-object class is casmic super class
+-object class is parent class of all the classes in java.
+-Every class in java implicity extends objects.
+- A variable of a type object can be used to refer to objects of any type.
+
+- Ex.object obj = new Employee(), -Available in Packag lang Java.
+
+-methods of object Super class
+1)public string tostring:- Return astring
+-that represents the value of an object on which it is invoked.
+2) Public boolean equals (object obj) : checks wheather one object is equd to another.
+3) Public int hashcode()
+4) public final class getclass()
+5) Protected void Finalize()
+6) Protected object clone()
+7) public final void wait (long timeout)
+8) public void Final void notify 
+9) Public final void notifyAll()
+******************************************************************************************************************************************
+*equal =  it checks sting...
+- === it check memory reference  string.
+
+******************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+** Concreate & Abstract class:
+*Concreate class :
+- A class which describes the functions of an object-
+-It can be instantiated.
+**********************************************************
+** Abstract class :
+- A class which contains generic non implemented methods.
+-Descendant classes comes up with the implementation for those methods in their own ways
+-It can contains abstraction as well a non abstract methods
+- Abstract method do not have implement
+-Implementation is left to inherit sub Classes.
+- can not be instantinted.
+************************************************************
+
+** Abstraction :
+-it is a concept of OOPS
+-abstraction means hide implementation from user show required services to the user
+-Ex. GUI Graphical User Interface
+-how to apply abstraction
+1. abstract class
+2. interface
+
+1. Abstract class
+-it is incomplete class
+-the abstract keyword present in the declaration of a class is called abstract class
+-public abstract class A{
+}
+********************************************************
+-concrete class
+e.g
+public class B
+}
+-you can define constructor in abstract class
+-you can define static and instance block in abstract class
+- you can define abstract method in abstract class
+-you can define concrete method in abstract class
+-you can define variable in abstract class
+************************************************************
+** Object :
+B b1=new B();
+A a1=new A(); //Error
+
+-you can not create an object of abstract class
+A a2;
+-you can create reference of abstract class
+Ex.
+public abstract class A{
+public abstract void m1();
+}
+
+public class B extends A{
+public void m1(){
+}
+}
+
+******************************************************************************************************************************************
+-if concrete class inherite abstract class then it is a responsibility of a child class to give method bo
+-method present in parent class
+-generally abstract class used as parent class
+-abstract can implements interface
+-abstract class can be a child class of another class
+Ex.
+public class A{
+public abstract class B extends A{
+public abstract void k1();
+}
+
+-you can not define abstract class as a static
+-you can not define abstract class as a private
+-you can not define abstract class as a final
+-if a class is final then you can not create its child class
+Ex.
+String, Scanner and all wrapper classes are final classes
+***************************************************************************************************************************************
+
+** Abstract method :
+-it is incomplete method
+-the method which have only declaration and not having method body is called abstract method e.g
+-public abstract void k1();
+- the abstract keyword is present in the method signature is called as abstract method
+**********************************************
+** Concrete method :
+-the method which have method body is called concrete method
+Ex.
+public void k1(){
+}
+
+-you can not define abstract method in concrete class
+-you can define abstract method only in abstract class
+-you can not define abstract method as private, static and final
+-you can not declare constructor as abstract
+-you can create object without reference
+-it is called as anonymous object
+Ex.
+public class A{
+main(){
+}
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+** Interface :
+-An interface defines a abstract bet Pravider & a Consumer.
+-Enables Common design. those classes even ar2065 not in hiezarchy.
+-Defines Standard set of properties,methods & events.
+-Any Provide the functionality. class implementing an interface has to
+-Based on Provider consumer model
+-one class can implement multiple interface 
+-one interface can extends multiple interface or one single class.
+
+* Features :
+-Interface is essentially collection of constants & abstract method.
+-The interface approach is sometimes Known as "Programming by contract.
+-Data members inan interface are always public, final, & static.
+-A subclass Can only Single supea class injava but a class can implement any number of interfaces
+-If a class implements an interface then have to implement all the method of it.
+
+**************************************************************************************
+** Interface :
+* abstract class
+-you can create empty abstract class
+* Dis-advantage :
+1. abstract class will not provide 100% abstraction
+2. you can define constructor, static and instance method, static and instance block in abstract class
+3. you can create empty abstract class
+4. if a class inherite any abstract class then it does not have a option to inherite another class i.e. multiple inheritance not possible
+
+** Interface :
+-it is a keyword
+-interface is pure abstract class
+-it provide 100% abstraction
+-syntax
+access modifier interface interface_name {
+-Ex
+public interface A
+void m1();
+
+* A interface name :
+-interface_name is identifier
+-interface name is reference data type |
+-interface it is a contract between customer and service provider
+-by default all methods in interface are public and abstract
+
+public interface A{
+void m1();
+public void k1();
+abstract void d1();
+public abstract void g1();
+}
+
+by default all variables in interface are public, static and final
+Ex.
+public interface A{
+int y=100;
+public int y1=200;
+final int y3=300;
+static int y4=400;
+public final int y5-500;
+final static int y * 6 = 600 ;
+public static int y * 7 = 700
+public static final int yB = 800
+}
+public final static int y * 9 = 900
+
+-if a concrete class implements interface then it is a responsibility of implemented class to give the method body 
+public interface A {
+void mi();
+public class B implements A(
+@Override
+public void mi() (
+
+-you can not define interface as private final and static
+-you can not define constructor in interface
+-interface is used to achieve the multiple inheritance
+-one class can implements more than one Interface
+
+Ex.public interface TI (
+void ki();
+public interface A (
+void mi();
+public class B implements A, TI
+
+@Override
+public void ki()(
+}
+
+@Override
+public void mi() {
+}
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+** Adding method definations to interface :
+-Possible from Java 8 onwords
+-why is it required?
+-what can be added
+-Default methods- implementation to Provide default interface method
+-Enables to adding  new functionality to existing  interface & ensure compatibility with older code implementing this interface (backword compatability)
+
+** static method:
+Ex- comparator interface is enhanced with default methods, static methods Lambda expaessions, method references
+-static main() method can be written inside the interface.
+-Private method allowed in interface
+
+*********************************************************
+
+** Tagging or Marker - Interface :
+-Tagging interface is also called Marker interface.
+-Tagging interface does not contain any method or data member.
+-it is an empty interface.
+-e.g. Clonable interface, serializable. interface.
+-It is used for marketing or tagging Purpose.
+- gives additional info. about behaviour of dass 
+
+***********************************************************
+** Abstract Class Vs. Interface
+                                          Abstract class                                      Interface
+Methods                   Can have abstract as well         All methods are abstract
+                                    as non-abstract methods
+
+Best suited for         Objects closely related in        Contract based provider model
+                                      hierarchy
+
+Component           By updating the base class all     Interfaces are immutable
+Versioning            derived classes are automatically
+                                updated
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+** Clonable:
+-Present in java lang Package
+-class implementing the interface is legal For clonning.
+-method clone () in object class.
+- If not implemented cloneNot support Execution is thrown.
+
+* Cloning:
+#Shallow cloning.
+object Reference (original)  ==>
+object Reference (cloned)
+Actual object on heap.
+
+* Deep Cloning..
+object Reference (original) ==> Actual object on heap
+object Reference (Cloned) ==> Actual object on heap
+
+******************************************************************************************************************************************
+** Serializable :-
+-Present in java io Package.
+- used to make an obiect eligible for Saving it's state into a file (sezializa
+-all subtypes also serializable.
+-If not implemented, class not eligible for Serializable oz de serializable
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+** Packages, Inner Classes, Lambda Exp
+
+*Packages:-
+-It is collection of classes grouped in directory 
+-way of grouping related classes & interface
+-it can contain many numbers of classes that related in Purpose, in scope
+-Reduce Problem with naming conflicts.
+-it is for organising your work from code libraries Provided by other.
+
+********************************************************
+** using Packages:.
+-To use public class of Package. Simply use the full Package name
+Ex. java.util.Date d = new java.util. Date()
+Package name,
+Import statements
+classes, interface.
+
+*********************************************************
+** Characteristics of Packages:.
+-import statement imports all public classes with in the packages, it does not import sub Package
+-wild card character cannot be used
+***********************************************
+* Static import :
+-it is feature introduced in java language veasion 5.0
+- Static membeas defined in class as public static to be used.
+-Allow to use static members & fields without specifying the class in which the field is defined
+-while using static members of class you mess to qulify them all the times.
+
+Ex- Col02.aed ΟΣ COLOΣ.. blue.
+CAS aed & blue aze static fields of coloz cla-
+Using static imports. it is possible to static members discctly by theia names without qurifying them.
+
+Syntax:
+Package name
+Form 1:
+import
+Foam 2:
+import
+
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+
+** Need of Inner classes :
+-Mechanisum allows grouping of related Functionalities together under one  roof.
+-we can access control using Private
+-Innez class can access all members including the private members and variables top level outer class
+- Incacases readiability & maintainability of the code.
+***************************************************
+
+** Inner classes:
+-It is class defined with another class
+-it can treated as member of outer class like any other member.
+-also called nested class
+
+Types:-
+1) simple inner class
+2) static inner class
+3) Method local inner class
+4) Anonymous inner class
+
+***************************************************
+
+** Simple Inner Classes :
+-A class being member of another class.
+-Being a member of outer class, inner class is associated with instance of outer class.
+-So an instance of InnerClass can exist only within an instance of OuterClass.
+-To instantiate an inner class, you must first instantiate the outer class.
+-Syntax for instantiating inner classes:
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+
+********************************************************************
+
+**Anonymous inner class :
+- Inner class that are declared without name called anonymous inner class 
+-Facilitates writing of event handlears
+-Anonymous inner clsses have no name and their type must be either subclass of the named type or an implementor of the named interface.
+
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+
+** Need of lambda Expression :
+-code should be concise
+-repetative syntax to be avoided
+-More readable.
+-More compact code than inner class
+
+** Lambda Expression :
+-A new feature in java 8.
+-Provide Simple way to implement
+-functional interface.
+
+Syntax:
+(arg. list)  ->  {body}
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+*** String, Wrapper Classes :
+** String Classes :
+-string class represents an immutable string.
+-once an instance is created the string  it contains can not be changed.
+-Normal string stores in Pool.
+
+**  Methods of string classes :
+-length()
+-recplace()
+- concat()
+-isEmpty()
+-toupper Case()
+-toLowerCase()
+-substring()
+-Compare to()
+
+********************************************************************************
+
+** StringBuffer class :
+-stringBuffer  class allows to create mutable string.
+-rellocate  memeory of given length to accommodate changes within same object
+- String Buffer is thread safe
+-The buffer grows automatically as chazacter are added.
+
+   - StringBuffer sb = new StringBuffer();
+
+*********************************************************************************
+
+** String Builder class :
+-Introduced in Java 5.0  version.
+-Alternative to StringBuffer class
+-there is no difference in both.
+-It is not thread-safe
+-for faster application.
+
+***********************************************************************************
+
+**Optional Class :
+-new-feature in java 8 in java util Package to deal with NullPointerException
+-Provides methods which are used to check the Presence of value for Particular variable. 
+-Public Final class
+-A clean code without to many null checks.
+-Alternate Value to return of alternate code to run can be specified.
+
+****************************************************************************
+** Wrapper classes:
+-Java Provides 8 primitive data types but sometimes there is need to convert a primitive types of an object. 
+- All Primitive have class counter parts called object wrapper or wrapper classes.
+
+* why wrapper classes:
+-To provide a home for methods & variables related to the type.
+-wrapper class are final
+-it is for type conversion, value testing etc..
+
+*******************************************************************************
+
+**   Primitive Type                 Wrapper Class
+               int                                     Integer
+              float                                  Float
+             double                               Double
+              long                                   Long
+             short                                  Short
+              char                                  Char
+          boolean                             Boolan
+              byte                                   Byte
+***********************************************************************************
+** wrapper class :
+int x = 30;                                                       Primitive to Wrapper
+Integer i = new Integer(x);
+
+integer obj = new Integer(100);             wrapper to Primitive
+int y = obj.intvalue();
+
+String s= 30;                                                 string to Primitive
+int i = Integer.parseInt(s);
+
+string s1: "30.6667";                                 string to wrapper
+Double i= Double value of (s1);
+
+****************************************************************************************************************************************
+** Auto Boxing & Auto unboxing:-
+-Auto boxing is new feature of JSE  5 
+-Before so working with Primitive types of weapper required conversions & vice-versa
+-The auto boxing & unboxing features automates the process.
+
+- Before java 5 :
+ int x=30;
+ Integer i=new Integer(x);
+
+ int y=i.intvalue();
+
+Auto Boxing effect Java 5 & onwords
+ int x=30;
+ Integer i=x;
+
+ int y=i;
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+*** Exception Handling :
+-The error that occur during the execution of program.
+
+                                                         Throwable (java.lang)
+               
+                                        Exception (java.lang)                      Error (java.lang)
+
+                              Runtime                         IoException
+                            Exception                            (java.io)
+                           (java.lang)
+***************************************************************************************************
+** Exception class:-
+- Base class for all exceptions
+   -Message Property. summary information about what the enrror was
+   -string getmessagec()
+-
+StackTrace:
+ - Information from the stack where the problem occured.
+ -void PrintStackTrace
+
+***************************************************************************************************
+
+** Types :
+1.Checked Exception: (compiletime)
+-occur due to Problem with resources system setting.
+- FileNotFoundException.
+
+2. Unchecked Exception:
+-Occur due to Programmers mistake.
+-called Runtime.
+-NullPointerException
+
+**************************************************************
+** try block :
+-it is a keyword
+syntax
+try{
+
+}
+- generally program define in try block which may raised the exception the exception can occurs outside the try block also
+-try block must followed by either catch or finally block
+Ex.
+a) try(
+}catch(Exception e){
+
+* Syntax
+try [
+} catch (Exception e) {
+Finally {
+}
+
+d) nested try block :
+-you can define try block inside the try block
+try{
+try(
+)catch(Exception e){
+} }catch(Exception e){
+}
+
+-if exception not occurs in try block then it will execute from start to end (line by line)
+-If exception occurs in try block then it will throw the exception object
+-at which line the exception is occurs the further code will not execute by JVM
+
+** catch block :
+-It is a keyword
+
+syntax
+catch(exception name obj)(
+}
+
+-for one try block you can define many catch blocks
+-one catch block can handle only one exception (until-1.6)
+-one exception have only one catch block you can not define many catch blocks for same exception you can define try-catch-finall only one catch block will execute to handle the exception
+-only one exception can occurs at a time catch only execute when in the try block exception is occurs and try block will throw exception object
+
+***********************************************************************************************************************************************
+
+**Checked vs Unchecked Exception :
+* Checked Exception :
+-Java Compiler checks whether exception is handled or reported by a method
+-Method from within which exception is thrown must handle such a exception
+-If method itself does not handle then that method must report such a exception to its caller method so that caller can handle
+-Compile time checking exception
+-Exception and its all subclasses except RutimeException are checked exception
+-e.g. FileNotFoundException
+
+* Unchecked Exception :
+-Java Compiler does not check whether exception is handled or reported by a method
+-Method from within which exception is thrown need not handle such a exception
+-Method need not report such a exception to its caller method, if itself does not handle
+-Not compile time checking exception
+-RuntimeException and its all subclasses are unchecked exception
+-e.g. ArithmeticException
+
+********************************************************************************************************
+
+** Java Exception classes :
+
+* Checked Exceptions :
+-IOException
+-FileNotFoundException
+-ClassNotFoundException
+-MalformedURLException
+-SQLException
+- InterruptedException
+- EOFException
+
+* Unchecked Exceptions :
+-ArithmeticException
+-NullPointerException
+-ArrayIndexOutOfBoundsException
+-IndexOutOfBoundsException
+-ClassCastException
+
+*********************************************************************************************************
+
+** Throws keyword :
+-It is used to handle exception
+-method level keyword.
+-Used in method Signature.
+
+Syntax:
+access modifier return type methodname (Parameter list) throws exception-1 exception.2
+
+- throws keyword will delegate the responsibility of exception handling to the called method.
+-you can handle many exception.
+-very effective for checked exception.
+-not much effective for unchecked
+
+*********************************************************************************************************
+
+** throw keyword: (self define)
+* throw-
+-used to throw obiect of exception
+-usually used to throw custom exception
+-Not a method level keyword.
+
+Syntax:-
+throw new exception-name("Print");
+
+* Difference Between :
+
+** throw keyword                                             
+-Used to throw an object of exception class type
+-It is used from within a method
+-Mandatory in case of application specific exception (user-defined exception)
+
+** throws Keyword :
+-Used to report the exception by a method to its caller method
+-It is used after method signature to report multiple exceptions
+-Mandatory in case of checked exception only.
+
+******************************************************************************************************************
+
+**  What is RETHROW?
+- Rethrow means: catching an exception and then throwing it again.
+- Why would we do that?
+- Because sometimes you only want to log / print something,
+-but you do NOT want to handle it completely you want the caller to handle it.
+
+-Example
+ try {
+   int x = 10/0;
+}
+catch (ArithmeticException e) {
+   System.out.println("Logged");
+
+ throw e; // rethrow
+}
+ Here:
+ Exception is caught
+ We printed "Logged"
+Then we re-threw the SAME exception
+So program still crashes, but logging was done.
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+                                                                                                                                   ***  Class Test  :
+SECTION A
+
+1.Why main() method is static?
+Because JVM calls main() without creating an object. Static method belongs to class, so it can be executed directly using class name. If main() was not static, JVM would first need an object, which is not possible before execution starts.
+
+2.Why constructor does not have return type?
+Constructor is used only to initialize object. It automatically returns the created object reference. If you give a return type, it becomes a normal method, not a constructor.
+
+3.Difference between static and instance variable.
+Static variable belongs to class. Only one copy is created and shared by all objects. Instance variable belongs to object. Separate copy is created for every object.
+
+4.Why String is immutable?
+For security, thread safety, performance (String pool), and caching. Once created, its value cannot change. Any modification creates a new object.
+
+5.What is runtime polymorphism?
+Method overriding. Method call is decided at runtime based on object reference. Example: Parent ref = new Child(); overridden method of Child is called.
+
+6.Difference between abstract class and interface.
+Abstract class can have abstract and non-abstract methods. It can have constructors and instance variables. Interface has only abstract methods (before Java 8). It supports multiple inheritance. A class can extend only one abstract class but implement multiple interfaces.
+
+7.Why finally block is used?
+To execute important code like closing resources. It runs whether exception occurs or not (except JVM crash or System.exit()).
+
+8.Difference between checked and unchecked exception.
+Checked exception is checked at compile time. Must handle using try-catch or throws. Example: IOException. Unchecked exception occurs at runtime. Not mandatory to handle. Example: ArithmeticException.
+
+9.Difference between final, finally and finalize. final is keyword used for variable, method and class.
+finally is block used in exception handling.
+finalize is method of Object class used before garbage collection (now deprecated).
+
+SECTION B
+Q1 OOPS + Polymorphism OOPS Pillars
+1)Encapsulation: Binding data and methods together. Example: BankAccount class with private balance and public getter.
+2)Abstraction: Hiding implementation. Example: ATM machine, user sees only operations.
+3)Inheritance: One class acquiring properties of another. Example: Car extends Vehicle. 4)Polymorphism: One name many forms. Example: method overriding.
+Upcasting
+Parent reference pointing to child object.
+A
+obj = new B();
+Downcasting
+Child reference from parent reference.
+B
+obj = (B) parentRef;
+Dynamic Method Dispatch Method call decided at runtime.
+A obj = new B(); obj.show(); // B method executes instanceof
+Used to check object type before downcasting.
+if(obj instanceof B) { B b = (B) obj;
+}
+
+Q2 Memory Concept
+Stack
+Stores method calls and local variables. Works in LIFO.
+Heap
+Stores objects and instance variables.
+Static area
+Stores static variables and static methods.
+Local variables stored in stack.
+Instance variables stored in heap inside object.
+Static variables stored in static area.
+Objects stored in heap.
+
+Q3 final Keyword final variable
+Value cannot change. final int x = 10; final method Cannot be overridden. final class
+Cannot be inherited. Example: String class.
+Can abstract class be final?
+No. Abstract class must be inherited. Final class cannot be inherited. Both are opposite.
+
+Q4 Exception Handling try
+Contains risky code.
+catch
+Handles exception. finally Always executes.
+throw
+Used to explicitly create and throw exception object. throws Used in method signature to declare exception.
+When to use throw?
+When you want to manually throw exception inside method.
+When to use throws?
+When you want to pass responsibility to caller method.
+
+Q5 String, StringBuffer, StringBuilder
+String :
+Immutable. Slow if modified frequently. Use when data not changing.
+StringBuffer :
+Mutable. Thread safe. Slower than StringBuilder.
+StringBuilder :
+Mutable. Not thread safe. Faster. Use in single thread when modifying string frequently
+
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+
+************************************************************* REFLECTION ******************************************************************
+
+ ** Introduction to REFLECTION :
+-Data about data.
+- This extra information of a class Can be found at suntime.
+-Metadata consist of
+-Methods
+-Constructors
+-Fields
+-Anotation
+******************************************************************
+*Reflection :
+-Reflection is a powerful technique to examine the metadata of any types at runtime
+-Why Reflection-
+-To examine of introspect the java program & manipulate internal Properties of the Program.
+-Reflection can be achieved by using Special Class 'class'
+
+**********************************************************************
+** Reflection :
+-The getclass() of object super class returns an instance of class.
+Employee e1= new Employee();
+Class C1 = e1 getClass();
+
+-Instance of class class can also be obtained by using static mettiod of class
+Class C2 = class. ForName ("Employee);
+**********************************************************************
+ ** In Reflection:-
+- Instance of class without using 'new. Keyword.
+-use of newInstance() method.
+
+Employee e =(Employee) class. ForName("Employee").newInstance();
+
+***********************************************************************
+
+** Method :
+*Reflection Methods
+-Public Field [] getField()
+-Public Field [] getDeclared Fields()
+-Public Method [] getMethod()
+-Public Method [] getDeclaredMethod()
+- public constructor [] geConstructor()
+- public Constructor [] getDeclaredConstructor()
+
+***********************************************************************************
+** REFLECTION:
+- Also support for enums, annotation & generic
+-It becomes simpler in java 5 using VarArgs & auto boxing
+-Java 6 interoducing  some new methods & Reflection for the web applets.
+-In Java 7 java.lang.reflect Modifier class has some new static methods
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+** GENRIC & COLLECTION :
+* collection-Interface hirarchy Java.
+
+                           Collection
+
+     List                     Set                 Queue                             Map                  
+ArrayList            Hashnet           PriorityQueue            HashMap
+LinkedList          SortedSet                                               HashTable                                    
+VectorStack      TreeSet                                                   SortedMap
+                                                                                              TreeMap
+
+*******************************************************************************************************************************************
+** COLLECTION :
+-It does not have fixed size, it has dynamic.
+-during execution of Program size collection will change automatically.
+-Size is growable.
+- syntax
+       List list = new ArrayList();
+
+-you can Perform CRUD operation.
+-there is Predefined data structure available in collection..
+-eg. Stack, Queue, Linkedlist.
+-store hetrogenous values
+-store only reference values
+- it is group of Individual object to represent single entity.
+-it is interface.
+-Present in java.util package.
+-Intacduce in java 1.2
+- you can store only reference value in collection
+-it is a child interface of Iterable interface
+-List, Queue and Set are child interface of Collection interface
+
+*****************************************************************
+** COLLECTIONS :
+-it is a class
+-you can call it as utility class
+- it has some utility method
+-e.g
+ sort(),search()
+- it is present in java.util package
+- it introduce in java-1.2
+*****************************************************************
+**  ARRAY :
+-it is a collection of homogenous elements and having continous memory locations
+-you can store many values under one variable name
+-syntax
+     data_type array_name[]=new data_type[size)
+-e.g.
+int y[]=new int[10];
+String str[]=new String[10];
+int, String data_type
+y, str array_name
+-10 size of array
+-you can perform CRUD operation on array
+-you can store primitive value and reference value in array
+-to transfer the data from one location to another location array is used
+-by using you can reduce length of code
+-dis-advantage it has fixed size
+-during the execution of program you can not change the size of array
+-int y[]=new int(10);
+-you can perform CRUD operation on array but no predefine methods available to perform CRUD operation there is no predefine data structure available in array
+-e.g.
+Stack, Queue etc.
+Stack, Queue etc.
+
+-Stack
+ Last In First Out (LIFO)
+ First In Last Out (FILO)
+
+-Queue
+ First In First Out (FIFO)
+ Last In Last Out (LILO)
+
+-from memory management array is not recommended
+-you can store only homogenous values in array
+-you can not store heterogenous values in array
+-you can store primitive values and reference values in array
+Student stud=new Student(10);
+
+*************************************************************************************************************************************************
+
+1.ARRAYLIST:
+-class in java.util.
+-Introduced in java 1.2.
+-Implements List
+-Internally uses dynamic azzay.
+-Non-synchronised not thread safe
+-fast Performance.
+- Not legacy (old)
+-Best for retrival/search.
+-Slow for insert/delete in middle
+-Syntax:-
+  Arraylist list = new ArrayList();
+  List list = new Array List();
+
+2.LINKEDLIST :
+-Class in java.util
+-Introduced in java 1.2
+-Implements List & Deque.
+-uses doubly linked list
+-Not legacy (old)
+-Best for insert & delete.
+-Worst for searching
+-Not Random Access
+-syntax:-
+    Linked list = new Linkedlist();
+    list list = new Linkedlist();
+    Queue list = new Linked list();
+
+3.VECTOR :
+-class in java.util
+-Introduced in java 1.0
+-Implement list
+-Synchronized thread safe
+-Performance Slow..
+-Legacy class
+-Parent of stack.
+-syntax
+    Vector v = new Vector();
+    list v = new Vector();
+*******************************************************************************************************************************************
+** Without Generic :
+-heterogeneous elements
+- Not type safe
+-Requires type casting
+*****************************************
+
+-** With Generic :
+-Allow only homogeneous elements.
+-Type safe
+-Not type casting acquired
+-Introduced in Java 1.5
+-works only on reference type.
+-Syntax.
+    ArrayList<Integer> list = new Array List <>();
+   list.add(10);
+   int x = list.get(o);
+
+********************************************************************************************************************************************
+
+**  ITERATOR :
+-It is an interface
+- Package java.util
+-in java 1.2
+-used to fetch data from collection.
+- work for list, set, queue
+- Moves only in foreword Dicection.
+- called universal Iterator.
+-Ex
+  Iterator it: list. iterator ();
+   while(it. hasNext()){
+
+}
+
+********************************************************
+** LIST ITERATOR:
+-child interface of Iterator
+-used only for list
+-can move forword & backword
+-method.
+-hasPrevious();
+-Previous();
+-add();
+- set();
+-Ex
+  ListIterator it = list ListIterator();
+    while (it hasNext()) {
+}
+
+***********************************************
+QUICK COMPARISON
+
+Feature                        ArrayList                   Vector                            LinkedList
+
+Thread Safe                     No                          Yes                                  No
+Performance                  Fast                        Slow                           Medium
+Best For                        Searching    Old multithreaded apps    Insert/Delete
+Structure                  Dynamic array       Dynamic array          Doubly linked list
+Legacy                               No                           Yes                                 No
+
+*******************************************************************************************
+*******************************************************************************************
+
+** SET Interface :
+-In package.java.util
+-Introduced in java 1.2
+-Child of collection
+-Duplicate elements not allowed
+-Insertion order not preserved
+-no index
+*Implementation :
+1.HashSet
+2.LinkedHashSet
+3.TreeSet
+
+1.HASHSET :
+-Class in java.util package
+-Introduced in java 1.2
+-Implements set
+-Allow one null value
+-Allow hetrogeneous elements
+-Duplicate not Preserved
+-Fast performance
+-Syntax :
+   HashSet<Integer> hs = new HashSet<Integer>();
+
+2.LINKEDHASHSET :
+-Child of hashset
+-Maintain insertion order
+-Introduced in java 1.4
+-Syntax :
+               LinkedHashSet<Integer> lhs = new LinkedHashSet<Integer>();
+
+3.TREESET:
+-In java.util package
+-Introduced in java 1.2
+-Implements set,Sortedset,navigable
+-Not allow null
+-Allow Homogeneous element 
+-Give sorted (Ascending) order
+-Duplicate not allow
+-Syntax :
+              TreeSet <Integer> ts=new TreeSet<Integer> ();
+******************************************************************************
+
+** Comparison :
+Features                HashSet             LinkedHashSet           TreeSet
+
+1.Order                        No                              Yes                      Sorted
+2.Null Allowed           Yes(one)                   Yes                         No      
+3.Sorting                      No                             No                          Yes
+4.Performance           Fast                          Medium                  Slow
+********************************************************************************************************************************************
+
+** MAP INTERFACE :
+-In Java.util package
+-Introduced in java 1.2
+-Store data in key value pair
+-Key must be Unique
+-No index
+-Not child of collection
+-SortedMap is child of Map 
+** Implementation :
+1.HashMap
+2.LinkedHashMap
+3.TreeMap
+4.HashTable (legacy)
+
+1.HASHMAP :
+-In java.util package
+-Introduced in java 1.2
+-One null key allowed
+-Multiple null values allowed
+-Does not allow duplicate keys
+-Allow duplicate values,not keys
+-Order not preserved
+-Fast performance
+-not thread safe
+-Syntax :
+               HashMap<Integer,String> map=new HashMap <Integer,String>();
+
+2.TREEMAP :
+-Sorted map (Ascending order)
+-Only homogeneous keys allowed
+-Key must be comparable or comparator based
+-Duplicate key not allows
+-Duplicate values allows
+-Syntax :
+             TreeMap map=new TreeMap();
+
+3.HASHTABLE :(Legacy) :
+-Thread safe(Synchronized)
+-Not null kay ,value allowed
+-Slow performance
+-In java 1.0 legacy class
+-Syntax :
+                Hashtable ht=new Hashtable();
+
+* COMPARISON : 
+Feature              HashMap              TreeMap                Hashtable
+
+Null Key                  Yes                           No                             No
+Sorting                     No                          Yes                             No
+Thread Safe            No                          No                              Yes
+Performance          Fast                     Medium                     Slow
+
+*****************************************************************************
+
+** Sorted Map Interface :
+-package java.util
+-In java 1.2
+-Child of map
+-Used for sorting purpose
+-Ordered according to the natural ordering of its key
+-Key implement by java.lang
+-One null key allow
+-Duplicate not allowed
+-Implement by TreeMap
+
+********************************************************************************************************************************************
+
+** QUEUE :
+-Package java.util
+-Child of collection
+-Follow FIFO (First In First Out)
+*Methods
+-add(e)  Insert (Throw exception if full)
+-offer(e) Insert
+-remove()
+-poll()
+-element()
+-peek()
+
+* COMPARISON :
+Queue Implementations :
+
+Class                             Order                Null Allowed                 Thread Safe
+PriorityQueue    Priority based                    No                                  No
+LinkedList                     FIFO                             Yes                                 No
+ArrayDeque            FIFO/LIFO                        No                                  No
+
+*****************************************************************************
+
+** STACK :
+-It is linear data structure
+-LIFO (Last In First Out)
+-List inherited element remove first
+*Oprations:
+-push()   Insert element
+-pop()    Remove element
+-peek()  View top element
+-isEmpty() check stack empty
+-isFull  check stack full
+*****************************************************************************
+
+**SORTING :
+1.Simple Integer Sorting :
+    ArrayList <Integer> list=new ArrayList <>();
+
+2.String sorting :
+    ArrayList<String> list=new ArrayList<>();
+*****************************************************************************
+
+** SORTED SET :
+-SortedSet is an interface
+-Package: java.util
+-Introduced in Java 1.2
+-Child of Set
+-Elements are stored in sorted (ascending) order
+-Duplicate elements not allowed
+-Does NOT allow index
+-Usually implemented by TreeSet
+** Properties :-
+-Maintains natural sorting order (ascending by default)
+-Does NOT allow duplicate elements
+-Does NOT allow null (because sorting needs comparison)
+-Only homogeneous elements (same type)
+-Provides special methods for range operations
+
+* Important Methods :-
+-first()   returns first (smallest) element
+-last()    returns last (largest) element
+-headSet(e)    elements less than e
+-tailSet(e)      elements greater than or equal to e
+-subSet(a,b)   elements between a and b
+-comparator()  returns comparator if used
+
+********************************************************************************************************************************************
+
+** COMPARABLE :
+-It is an interface
+-Package java.util
+-In java 1.2
+-Used for default/natural sorting
+-Sorting logic is written inside the same class
+-Has only one method
+-Public int CompareTo(Object o);
+-All wrapper classes & string implement comparable
+-wrapper.compare(this.value,o.value)   Ascending
+-wrapper.compare(o.value,this.value)   Descending
+
+*********************************************************
+
+** COMPARATOR :
+-It is an interface
+-Package java.util
+-Used for custom sorting
+-Sorting logic written in separate class
+-It is functional interface
+*Method 
+    public int Compare(Object o1,Object o2);
+********************************************************************************************************************************************
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+
+** PROPERTIES CLASS : 
+-Properties is a built-in Java class used to read and write configuratio
+-(settings) data from an external file.
+-It is mainly used to store String-String key-value pairs such as:
+-username
+-password
+-database URL
+
+** Why Properties is used :
+-If we write settings directly inside the program:
+-String user = "scott";
+-String pass "tiger";
+-and later the password changes, we must modify and recompile the program.
+-To avoid this, Java provides the Properties class.
+-Properties File Example (config.properties => no space and quotes allowed)
+-user-scott
+-password=tiger
+-url=localhost
+-This file can be changed without touching the Java program.
+-Properties p = new Properties();
+  p.load(new FileInputStream("config.properties"));
+
+********************************************************************************************************************************************
+
+**  WHY METHOD REFERENCE :
+-A new feature in Java 8
+-Lambda expression sometimes just calls an existing method
+-A cleaner way to refer to the existing method is by its name
+-Short-hand notation of lambda expression but only for existing methods
+* Method references can be given to:
+1. Static methods
+2. Instance methods
+3. Instance methods of any arbitrary object
+4. Constructor
+-Method accessed using :
+
+** Method References vs Lambda Expressions :
+
+Syntax                                                        Example                     As Lambda
+
+-ClassName::new                                 String::new               ()->new String()
+-Class: static MethodName              String::valueOf       (s)->String.valueOf(s)
+-Object: Instance MethodName         x::toString            ()->"Hello".toString()
+-Class::instanceMethodName        String:toString             (s)->s.ToString()
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+
+****************************************************FILE IO & SERIALIZATION********************************************************************
+
+** STREAM :
+-A new feature that was introduced in Java 8
+-A powerful addition to Java API that allow functional style processing of arrays and collections O
+-Stream APIs provide a high level of abstraction for processing data in a declarative and parallelizable manner
+-Makes code concise and expressive
+-A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+
+**  Features of STREAM :
+-Designed for processing data :
+  NOT used to store data
+-Functional-style operations :
+ like map, filter, and reduce enabling developers to express data processing logic in declarative and readable way.
+-Pipelining : 
+ allow for chaining multiple operations together to form a pipeline
+ O/P of one operation as an I/P to other
+-Lazy evaluation :
+ Intermediate operations are not executed until final operation is invoked
+ Improves efficiency
+-Parallel processing :
+ Divide datasets into chunks and process them concurrently
+-Can be easily output as arrays or lists
+-Not reusable
+
+
+-Collections are about DATA whereas Streams are about COMPUTATIONS
+-Collections-in-memory data structure which holds the value the data structure has.
+-Streams-in which elements from arrays or collections are computed on demand
+
+** Date/Time :
+-LocalDate A LocalDate is a date, with year, month, and day of the month.
+ LocalDate today - LocalDate.now();
+ LocalDate christmas 2015 - LocalDate.of (2015.12.25);
+ LocalDate Christmas2015 - LocalDate.of(2015,Month. December, 25);
+
+-Calender c = Calender.getInstance();
+ c.add(Calender. DATE, 1)
+ Date atc.etTime()
+ LocalDate tomorrow= LocalDate.now().plusDay(1);
+
+-LocalDate nextPayDay =
+ LoclaDate.now().with(TemporalAdjusters.last Da yOfMonth());
+**************************************************************************************
+
+** STREAM :
+-Inputstream : This depicts the flow of byte from data Source to the Programs memorу 
+-output stream : This depicts the flow of byte from the Program memory destination data Store.
+** Two basic operations involved :
+   Read from input stream
+   write From input stream.
+
+*******************************************************************************************
+
+** FILE CLASS :
+-An abstraction representation of file directory Pathnames.
+-Models an os directory entry... enabling you to access info about a file
+-objects of file do not actually of Provide any file Processing capabilities open a file
+-file objects are used to do all.
+
+** Method :
+-Public boolean can Read()
+-public boolean isAbsolute()
+-public boolean exists()
+-Public long length()
+-public boolean delete()
+-public boolean, CreateNewFile()
+-public boolean media()
+
+
+** FILEINPUTSTREAM CLASS :
+-helps to open file in read mode
+-Throws FileNotFoundException if file not exists.
+-in read() used to read next byte of data
+-Terminates reading if end of stream reached 
+
+** FILEOUTPUTSTREAM CLASS :
+-help to open a file in write or append mode 
+-Creates file, if does not exist
+-write (int b) method to write next byte of data.
+
+
+** SERIALIZATION :
+-Need for Persisting object
+-Presistence : Storing the state of an object
+-Reason : for future use
+-Serialization is the Process of writing objects to stream & reading them back
+-To be serialized, your objects must Implement the sezialization interface.
+-Serialization interface is a marker interface
+
+
+** Object Serialization :
+-Sezialization interface.
+-Externalizable interface.
+-readExternal()
+-writeExternal().
+
+
+** Object Serialization :
+-object serialization Process (Output)         object Deserialization Process(Input)
+
+-Create file output Stream                                       Create file input Staeam.
+-Connect them                                                                   connect them.
+-call writeobject()                                                           call readobject()
+
+
+** SERIALIZATION-FACTS :
+-Static data members are not serialized
+-If  an obiect contains other obiects then all contained objects need to implement serializable interface.
+-if you don't want serialize Particular attribute of object then make that attribute tansient
+-Tansient keyword indicates that member Should not be serialized.
+
+
+** Externalizable :
+-writeExternal() method for object serialization
+-readExternal() method for object Deserialization.
+-Default constructoz compulsory.
+-Advantage :
+   object has a control to serialize its contents
+
+******************************************************************************************************************************************
+******************************************************************************************************************************************
+
+**********************************************************   SYSTEM CLASS  *****************************************************************
+
+** SYSTEM CLASS :
+-Three static I/O objects have already been created by the time main () method gains control.
+-All 3 are public static members of System class.
+ System.in
+ System.out
+ System.err
+-System is associated with these objects, provide communication channels between a program and a particular file or device.
+
+
+** CONSOLE CLASS :
+-Its is a new java 6 feature to get standard streams.
+-Console is generally used for secure password entry.
+-Methods to access the character-based console device.
+-It returns unique instance of Console with current Virtual Machine. 
+  String input = System. Console().readLine();
+
+
+** REGULAR EXPRESSION IN JAVA :
+-regex means "Regular expressions" which is available in a java.util.regex package.
+-A kind of language within a language
+-Designed to help programmers with the searching tasks.
+-Regex engine search textual data using instructions that are coded into expressions.
+-Regex language is used to create expressions.
+
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+
+*****************************************************    MULTI-THREADING  *****************************************************************
+
+** Demystifying MUILTI?:
+1.CPU : Central Processing unit
+           All operations same in CPU
+2.CORE : Multiple core mean multiple task can run simultaneously. 
+3.PROCESS. A Process is program in execution
+4.THREAD - A thread is a independent part of a Process that can run in Parallel
+
+** MULTIPROCESSING (context switch) :
+-when OS switches CPU From one process to another, is called context switching 
+-Data stored dusing context switch
+-current instruction
+-Instruction Set
+
+** THREAD SCHEDULING:
+-Thread scheduling is the mechanism by which the OS decides which thread Should be stop.
+-Fully controlled by OS.
+
+* Types:-
+1.Premitive : Forcefully stop running thread. 
+2.Non-Premitive : Thread runs until finishes task
+
+** NEED OF THREAD :
+1.Program Execution. -
+2.Dependency module.
+3.Problem  of single thread
+4.Time consuming module effect.
+
+* FEATURES :
+-It is smallest unit of execution
+-Each Process has many threads
+-share same memory
+-its own stack
+
+* When use :
+-long time operations.
+-waiting for use input 
+-Prioritizing tasks.
+
+** Method te create Thread :
+1.Extending thread class.
+-create class that extends
+-Syntax :
+       Class SimpleThread extends Thread
+
+2.Implementing Runnable Interface :
+-Create class that implements Runnable
+-syntax :
+      Class MyThread Implements Runnable
+
+**   THREAD Class                                         RUNNABLE Interface
+-Extends Thaead                                       -Implements Runnable
+-cannot extend and other class            - Can extend another class
+-Less flexible                                             - More flexible preffered
+- older approach                                      -Modern recommended approach.
+
+
+** MULTI-THREADING -AN Algorithm :
+1.Break up an application into individual modules
+2) list execution flow of application.
+3) Identify modules blocking CPU.
+4) Identify modules independent of each other
+5) Build alternate execution flows.
+6) Create threads for each execution flow
+7) Encapsulate.
+8) Start threads
+
+* Ex of Multi-Threading :
+1.Downloading file while using application
+2.Online chat application
+
+** THREAD PRIORITY :
+-used by thread scheduler to decide when each thread should be allowed to run
+-Threads of equal Priority compete equally for CPU
+-It pickups up the highest-priority thread that is currently runnable
+-Priority levels range from 1  (MIN_PRIORITY) to 10 (Max-Priority) 
+-5 (Norm_Priority) default Priority.
+
+*THREAD METHODS :
+-Start()
+-Sleep()
+-join()
+-yield()
+-isAlive()
+-CurrentThread()
+
+
+** THREAD SYNCHRONIZATION :
+-It is a concept of monitor/mutex.
+-A monitor is object used to as mutually exclusive lock.
+-Only one thread can own a monitor at a time.
+-When thread acquires a lock it is said to have enterned the monitor.
+
+-A thread becomes the owner of the object's monitor in one of two ways:
+1. By executing a synchronized instance method of that object.
+2. By executing the body of a synchronized statement that synchronizes on the object.
+-Only one thread at a time can own an object's monitor
+
+** WAIT () :
+-Method of the Object super class (not class Thread).
+-Allows thread to wait inside a synchronized method.
+-When invoked, the current thread is blocked & gives up the object lock.
+-Waits to be notified by another thread of a change in this object.
+-This lets another thread entry into the monitor.
+
+**  NOTIFY(), NOTIFYAll() :
+-When a thread enters wait(), it has no way of unblocking itself.
+-If all threads wait, it leads to DEADLOCKS.-
+-notify():Wakes up a single thread that is waiting.
+-This method should only be called by a thread that is the owner of the object's monitor.
+-notifyAll(): Wakes up all threads that are waiting on this object.
+
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+
+*********************************************************** JDBC CONNECTIVITY  ***********************************************************
+
+** Connectivity Steps :
+1.Create a SQL query.
+2.Establish a connection.
+3.Associate SQL with the connection.
+4.Fire the query.
+5.Get the result (set of rows)
+6.Process the result.
+7.Close the connection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

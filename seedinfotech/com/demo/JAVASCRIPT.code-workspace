@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../RWD/JAVASCRIPT"
+		},
+		{
+			"path": "../../../../RWD/BOOTSTRAP"
+		},
+		{
+			"path": "../../../../RWD/CSS"
+		},
+		{
+			"path": "../../../../RWD/HTML"
+		},
+		{
+			"path": "../../../../RWD/JQUERY"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BOOTSTRAP"
+	}
+}
