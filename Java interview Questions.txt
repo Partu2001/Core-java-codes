@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ***********************************************************Java Interview Questions ***********************************************************
 Q.What are access specifier avilable in java?
@@ -229,3 +230,236 @@ Static blocks are used for:
 Initialization of static variables
 One-time setup work
 They execute only once when the class is loaded.
+=======
+
+***********************************************************Java Interview Questions ***********************************************************
+Q.What are access specifier avilable in java?
+=> There are 4 access specifiers:
+private – accessible only within the class
+default – accessible within the same package
+protected – accessible within package + subclasses
+public – accessible everywhere
+
+Q.What is Encapsulation?
+=>Encapsulation is wrapping data and methods into a single unit (class) and restricting direct access using private variables and public getters/setters.
+
+Q.Difference between String,StringBuffer,StringBuilder?
+=>
+-String :
+Immutable. Slow if modified frequently. Use when data not changing.
+-StringBuffer :
+Mutable. Thread safe. Slower than StringBuilder.
+-StringBuilder :
+Mutable. Not thread safe. Faster. Use in single thread when modifying string frequently
+
+Q.What is Serilization?
+=>Serialization is the process of converting an object into a byte stream to save it to a file or send over a network.It is done using Serializable interface.
+
+Q.What is diiference between ArrayList and HashSet?
+=>
+ArrayList            	                                HashSet
+
+Allows duplicates	                           No duplicates
+Maintains insertion order	         No order
+Uses index	                           No index
+
+Q.Differnce between Interface and Abstraction?
+=>
+Interface	                                                             Abstract Class
+
+100% abstraction (before Java 8)	Partial abstraction
+Multiple inheritance allowed	                  Single inheritance
+Uses implements	                                        Uses extends
+
+Q.What is final,finalize,finally?
+=>1.final → keyword (used with variable, method, class)
+2.finally → block (used in exception handling)
+3.finalize() → method (called before garbage collection)
+
+Q.What is method Oevrriding & Overloading?
+=>-Overloading → Same method name, different parameters (Compile-time)
+-Overriding → Same method in child class (Runtime)
+
+Q.What is polymorphism?
+=>Polymorphism means “many forms”.
+One method behaves differently based on object.
+
+Q.What is java?
+=>Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems and now owned by Oracle Corporation.
+
+Q.Diiference betweem .java and .class file?  
+=>.java → Source code file
+.class → Compiled bytecode file
+
+Q.What is TypeCasting?
+=>Converting one data type into another.
+-Widening (Implicit)
+-Narrowing (Explicit)
+
+Q.What is OOPs & why it is important?
+=>OOP = Object-Oriented Programming
+It uses:
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+Important because it improves:
+Code reusability
+Security
+Maintainability
+
+Q.What is aaray,Disadvantage of array?
+=>Array is a collection of similar data types.
+Disadvantages:
+Fixed size
+Same data type only
+Insertion/deletion difficult
+
+Q.Why java is simple language?
+=>No pointers
+Automatic garbage collection
+Rich API
+Easy syntax
+
+Q.Operators in java?
+=>Arithmetic
+Relational
+Logical
+Assignment
+Unary
+Bitwise
+Ternary
+
+Q.What is Conditional Statement?
+=>if Statement:
+Executes code only if condition is true.
+if-else Statement:
+Executes one block if condition is true, otherwise another block.
+if-else-if Ladder:
+Used when multiple conditions need to be checked.
+Nested if:
+An if inside another if.
+switch Statement:
+Used when checking multiple values of a single variable.
+
+Q.How you accept the exception handling in java?
+=>An exception is an unwanted event that occurs during program execution and disturbs the normal flow of the program.
+try
+catch
+finally
+throw
+throws
+
+Q.What is package?
+=>A package is a namespace that organizes classes and interfaces.
+
+Q.Why java is dynamic language? 
+=>Because it supports:
+Dynamic class loading
+Runtime polymorphism
+
+Q.How many editions in java?
+=>3 main editions:
+Java SE
+Java EE
+Java ME
+
+Q.Wha are exceptions in java?
+=>An exception is an unwanted event that occurs during program execution and disturbs the normal flow of the program.
+-ArithmeticException
+-NullPointerException
+-ArrayIndexOutOfBoundsException
+-NumberFormatException
+-FileNotFoundException (Checked Exception)
+
+Q.What is class and object?
+=>A class is a blueprint or template used to create objects.
+It contains:
+Variables (data / properties)
+Methods (functions / behavior)
+
+-object is an instance of a class.
+- It represents a real-world entity.
+- It occupies memory.
+- It can access class variables and methods.
+
+Q.What is pure OOP and why java is not pure object oriented programming?
+=>Pure OOP means everything is object.
+Java is not pure OOP because it supports primitive data types like int, char, etc.
+
+Q.Difference between Inheritance and Polymorphism? 
+=>Inheritance → Acquiring properties from parent
+Polymorphism → Same method, different behavior
+
+Q.What is Abstraction?
+=>Hiding internal implementation and showing only functionality.
+
+Q.Can we instantiate the Abstarct Class?
+=>No, but we can create a reference of abstract class.
+
+Q.Can a class inherit the Constructor of its base class?
+No, constructors are NOT inherited in Java.
+-Why Constructors Are Not Inherited?
+A constructor is used to initialize the object of that class.
+Since it belongs only to that specific class, it cannot be inherited by a child class.
+Constructors are special methods:
+Same name as class
+No return type
+Called when object is created
+They are not normal methods, so they are not inherited.
+
+Q.What is contsructor channing?
+=>Calling one constructor from another using:
+this()
+super()
+
+Q.What is singleton class?
+=>A class that allows only one object creation.
+Uses:
+Private constructor
+Static instance
+Public getInstance()
+
+Q.Difference between Abstraction and Encapsulation?
+=>
+Abstraction	                                                 Encapsulation
+Hides implementation	                              Hides data
+Achieved by abstract class/interface	Achieved by private variables
+
+Q.What is Constructor and Destructor and can we overload them?
+=>Constructor → Initializes object
+Destructor → Cleans object (Java uses Garbage Collector)
+Constructors can be overloaded
+
+Q.What is composition?
+=>Composition is a "has-a" relationship (one class contains another class object).
+
+Q.What is exception handling?
+=>An exception is an unwanted event that occurs during program execution and disturbs the normal flow of the program.
+In simple words:
+When something goes wrong at runtime, Java creates an exception object.
+
+Q.What is coupling & why it is important?
+=>Coupling is the dependency between classes.
+Low coupling is preferred.
+
+Q.Can we override the constructor?
+=>No, constructors cannot be overridden.
+-Why Constructors Cannot Be Overridden?
+To override a method, these conditions must be true:
+Method must be inherited
+Method name must be same
+Method signature must be same
+Method must not be final, static, or private
+
+Q.Which method will execute first : Static or Main?
+=>🔹 Why Static Block Executes First?
+When a Java program runs:
+JVM loads the class into memory.
+Static variables and static blocks are executed first.
+Then JVM calls the main() method.
+Static blocks are used for:
+Initialization of static variables
+One-time setup work
+They execute only once when the class is loaded.
+>>>>>>> 76787bd0fd7a1c7c51c4b40e498184cb50db18e8

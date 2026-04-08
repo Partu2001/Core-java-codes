@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1.
 package chapter2;
 public class Arithmetic {
@@ -93,3 +94,100 @@ public class MainEmployeeDetails {
 	}
 
 }
+=======
+1.
+package chapter2;
+public class Arithmetic {
+	public void add(int ...a) {
+		int sum=0;
+		for(int i=0;i<a.length;i++) {
+			sum+=a[i];
+		}
+		System.out.println("Sum is:" +sum);
+	}
+
+}
+
+***************************
+package chapter2;
+public class MainArithmetic {
+
+	public static void main(String[] args) {
+		Arithmetic a=new Arithmetic();
+		a.add(1,2,3,4,5);
+		a.add(5,6,7,9
+				);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+**************************************************************************************
+2.
+package chapter2;
+import java.util.Scanner;
+public class EmployeeDetails {
+	int id;
+	String name;
+	int salary;
+	String position;
+	Scanner sc=new Scanner(System.in);
+
+	EmployeeDetails(){
+		
+	}
+	EmployeeDetails(int id,String name,int salary,String position){
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+		this.position=position;
+}
+	public String tostring() {
+		return id + " " + name +" " +salary +" " + position;
+	}
+	
+	public void Accept(EmployeeDetails arr[]) {
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=new EmployeeDetails();
+			System.out.println("Enter the ID:");
+			arr[i].id=sc.nextInt();
+			System.out.println("Enter the name:");
+			arr[i].name=sc.next();
+			System.out.println("Enter the salary:");
+			arr[i].salary=sc.nextInt();
+			System.out.println("Enter the position:");
+			arr[i].position=sc.next();
+		}
+	}
+		public void Show(EmployeeDetails arr[]){
+			for(int i=0;i<arr.length;i++) {
+				System.out.println( "Employee ID:"+arr[i].id);
+				System.out.println("Employee Name:"+arr[i].name);
+				System.out.println("Employee Salary:"+arr[i].salary);
+				System.out.println("Employee Position:"+arr[i].position);
+		
+	}
+}
+}
+
+***************************
+package chapter2;
+import java.util.Scanner;
+
+public class MainEmployeeDetails {
+
+	public static void main(String[] args) {
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number of students:");
+		n=sc.nextInt();
+		EmployeeDetails s=new EmployeeDetails();
+		EmployeeDetails arr[]=new EmployeeDetails[n];
+		s.Accept(arr);
+		s.Show(arr);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+>>>>>>> 76787bd0fd7a1c7c51c4b40e498184cb50db18e8
